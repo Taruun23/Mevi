@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canteen Billing System</title>
+</head>
+<body>
+    <style>
+        body{
+
+    /* background-color: rgb(4, 255, 234); */
+    background-image: url(https://wallup.net/wp-content/uploads/2019/09/761404-restaurant-food-architecture-interior-design-room.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+
+}
+input{
+    display:  block;
+    padding: 30px;
+    width: 450px;
+    margin: 10px 0;
+    border: 5px solid rgb(121, 101, 101);
+    border-radius: 10px;
+    font-size: 30px;
+    text-align: center;
+
+
+}
+button{
+    background-color: rgb(176, 85, 85);     
+    color: white;
+    font-size: 30px;
+    border:  none;
+    border-radius: 10px;
+    padding: 20px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    
+
+    
+}
+
+.container{
+    background-color: rgba(0, 0, 0, 0.384);
+    padding: 30px 40px;
+    border-radius: 10px;
+    text-align: center; 
+    box-shadow: 0 0 30px black;
+    color: rgb(255, 255, 255);
+    font-size:20px;
+}
+ .head{
+    color: rgb(4, 20, 246);
+
+ }
+ 
+    </style>
+    <style src="canteen.css"></style>
+    <div class="container">
+        <div class="head"><h1>Welcome to our Canteen</h1></div>
+       <h2>Here is our menu</h2>
+
+    <div calss="new">
+        <label>Coffee: Rs.15 <input type="number" min="0" value="0" id="coffee"> </label><br>
+        <label>Tea: Rs.15 <input type="number" min="0" id="tea" value="0"> </label><br>
+        <label>Idli: Rs25 <input type="number" min="0" id="idli" value="0"> </label><br>
+        <label>Dosa: Rs.50 <input type="number" min="0" id="dosa" value="0"> </label><br>
+        <label>Tomato bath: Rs.40 <input type="number" min="0" id="tomatobath" value="0"> </label><br>
+        <label>Pakoda: Rs.20 <input type="number" min="0" id="pakoda" value="0"> </label><br>
+ 
+
+      <button onclick="bill()">Calculate Bill</button>
+      <p id="bill">Total amount will be:</p>
+    </div>
+
+    
+</div>
+
+    <script src="canteen.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    body{
+         /* background-color: rgba(255, 0, 183, 0.815);  */
+         background-image: url(https://cdn.wallpapersafari.com/9/58/EKgw7T.jpg) ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+
+    }
+    input{
+        display:  block;
+        padding: 30px;
+        width: 450px;
+        margin: 10px 0;
+        border: 5px solid rgb(121, 101, 101);
+        border-radius: 10px;
+        font-size: 30px;
+        text-align: center;
+
+
+    }
+    button{
+        background-color: rgb(176, 85, 85);     
+        color: white;
+        font-size: 18px;
+        border:  none;
+        border-radius: 10px;
+        padding: 20px 20px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+    .container{
+            background-color: rgb(220, 34, 152);
+            padding: 30px 40px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 30px black;
+        }
+        .exa{
+            background-color: rgb(9, 49, 213);  
+            font-size: 29px;
+            border:  none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 10px;
+            padding: 10px 20px;
+            color: white;
+
+            
+
+        }
+</style>
+    
+<div class="container">
+    <div class="lo"> <p> <H1>LOVE CALCULATOR😘</H1></p>
+    </div>
+<input type="text" placeholder="Enter your name💖" id="name">
+<input type="text" name="" id="name2" placeholder="Enter partner's name😍">
+<button onclick="love()">Click here for a surprise</button>
+<div class="exa">
+    <p id="result">Love❤️% Displayed Here</p>
+</div>
+
+</div>
+<script>
+    function love(){
+        var name=document.getElementById("name").value;
+        var name2=document.getElementById("name2").value;
+        var result=document.getElementById("result");
+        if(name == ""|| name2 == ""){
+            alert("please enter both the names");
+
+        
+    }
+    const love=Math.floor(Math.random() * 100) ;
+      result.innerHTML= `${name} ❤️ ${name2} = ${love} % love match!`;
+    }
+
+    
+</script>
+    
+</body>
+</html>

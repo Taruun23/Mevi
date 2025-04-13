@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+
+            /* background-color: rgb(4, 255, 234); */
+            background-image: url(https://wallpaperaccess.com/full/1320272.jpg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+
+        }
+        input{
+            display:  block;
+            padding: 30px;
+            width: 450px;
+            margin: 10px 0;
+            border: 5px solid rgb(121, 101, 101);
+            border-radius: 10px;
+            font-size: 30px;
+            text-align: center;
+
+
+        }
+        button{
+            background-color: rgb(176, 85, 85);     
+            color: white;
+            font-size: 18px;
+            border:  none;
+            border-radius: 10px;
+            padding: 20px 20px;
+            cursor: pointer;
+            margin-top: 10px;
+            
+
+            
+        }
+        
+        .container{
+            background-color: rgba(0, 0, 0, 0.384);
+            padding: 30px 40px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 30px black;
+        }
+        .exa{
+            background-color: rgb(12, 221, 245);  
+            font-size: 29px;
+            border:  none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 10px;
+            padding: 10px 20px;
+
+            
+
+        }
+    </style>
+    <div class="container">
+    <input type="text" placeholder="Enter your name" id="name">
+    <input type="number" name="" id="age" placeholder="Enter your age">
+    <input type="text" name="" id="country" placeholder="Enter your nationalality in CAPS">
+    <button onclick="vote()">Submit</button>
+    <div class="exa">
+        <p id="result">Results displayed here</p>
+    </div>
+    
+</div>
+    
+
+<script>
+    function vote(){
+        var name=document.getElementById("name").value;
+        var age=parseInt(document.getElementById("age").value);
+        var result=document.getElementById("result");
+        var country=document.getElementById("country").value .toUpperCase();
+        if(age>=18 && country == "INDIA"){
+            result.innerHTML="Congrats your eligible to vote"+"  "+name;
+            // alert("Eligible to vote");
+        }else{
+            result.innerHTML="LOL your a child brro"+"  "+name;
+            // alert("your are still a child");
+        }
+
+        // alert(name)
+        // alert(age)
+    }
+</script>
+</body>
+</html>

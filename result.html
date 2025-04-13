@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+             background-color: peachpuff;  
+             
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+    
+        }
+        input{
+            display:  block;
+            padding: 30px;
+            width: 450px;
+            margin: 10px 0;
+            border: 5px solid rgb(121, 101, 101);
+            border-radius: 10px;
+            font-size: 30px;
+            text-align: center;
+    
+    
+        }
+        button{
+            background-color: rgb(176, 85, 85);     
+            color: white;
+            font-size: 18px;
+            border:  none;
+            border-radius: 10px;
+            padding: 20px 20px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .container{
+                background-color: rgb(240, 218, 14);
+                padding: 30px 40px;
+                border-radius: 10px;
+                text-align: center;
+                box-shadow: 0 0 30px black;
+            }
+            .exa{
+                background-color: rgb(9, 49, 213);  
+                font-size: 29px;
+                border:  none;
+                border-radius: 10px;
+                padding: 10px 20px;
+                cursor: pointer;
+                margin-top: 10px;
+                padding: 10px 20px;
+                color: white;
+    
+                
+    
+            }
+    </style>
+    <div class="container">
+        <p> <H1>RESULT PREDICTOR</H1></p>
+        <p><h2>Student Name:</h2></p>
+        <input type="text" placeholder="Enter your name" id="name">
+        <button onclick="result()">Get Result</button>
+        <div class="exa">
+            <p id="result">Results displayed here</p>
+        </div>
+        
+    </div>
+    <script>
+        function result(){
+            
+            var name=document.getElementById("name").value;
+            var result=document.getElementById("result");
+            
+            if(name == ""){
+
+                alert("please enter your name");
+            }
+            
+            
+             const submit=Math.floor(Math.random() * 100) ;
+            if(submit>80){
+            // result.innerHTML= ` ${submit}  ` ;
+           result.innerHTML="Result:"+"  "+submit + "%"+"  "+"Distinction⭐";
+           }else if(submit>=60){
+            // result.innerHTML= `  ${submit} ` ;
+            result.innerHTMl="Result:"+"  "+submit + "%"+"  "+"First Class😁";
+            }else if(submit>=50){
+                // result.innerHTML= `  ${submit} ` ;
+            result.innerHTML="Result:"+"  "+submit  + "%"+"  "+"Second class😃"  ;
+              }else if(submit<=35){
+              result.innerHTML="Result:"+"  "+submit + "%"+"  "+"You failed better luck next time👍";
+              }
+          
+            }
+            
+            
+
+        
+
+       
+    
+    
+        
+    </script>
+    
+</body>
+</html
